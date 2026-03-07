@@ -29,7 +29,7 @@ import yaml
 from tensorboardX import SummaryWriter
 from tqdm import tqdm
 
-from torchlight.torchlight import DictAction
+from torchlight import DictAction
 
 
 def init_seed(seed):
@@ -197,7 +197,7 @@ def get_parser():
         default=0.1,
         help='decay rate for learning rate')
     parser.add_argument('--warm_up_epoch', type=int, default=0)
-    parser.add_argument('--local_rank', type=int, default=0)
+    parser.add_argument('--local_rank', '--local-rank', type=int, default=0)
     parser.add_argument('--master_port', type=int, default=65001)
     return parser
 
